@@ -1,0 +1,105 @@
+@import "mixins/device";
+
+.content.items {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-content: stretch;
+  align-items: stretch;
+  // justify-content: stretch;
+
+  flex-direction: row;
+}
+
+.item {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background-color: yellow;
+  width: 50vw;
+  height: 50vh;
+  // margin: 2px
+
+  font-size: 6rem;
+  color: white;
+  font-family: Arial;
+  font-weight: bold;
+}
+
+.favorite.podcast {
+  font-size: 3rem;
+  flex-direction: column;
+  .emoji {
+    font-size: 6rem;
+  }
+}
+
+.favorite.book {
+  font-size: 3rem;
+  flex-direction: column;
+  .emoji {
+    font-size: 6rem;
+  }
+}
+
+.favorite.movie {
+  font-size: 3rem;
+  flex-direction: column;
+  .emoji {
+    font-size: 6rem;
+  }
+}
+
+.favorite.video-game {
+  font-size: 3rem;
+  flex-direction: column;
+  .emoji {
+    font-size: 6rem;
+  }
+}
+
+.item {
+  &:nth-child(1) {
+    // background-color: $salmon;
+  }
+  &:nth-child(2) {
+  }
+  &:nth-child(3) {
+    // background-color: $blue;
+  }
+  &:nth-child(4) {
+  }
+}
+
+@include phone() {
+  .content.items {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-content: stretch;
+    align-items: stretch;
+
+    flex-direction: row;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    // align-items: flex-start;
+
+    width: 100vw;
+    height: 25vh;
+
+    font-size: 6rem;
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+
+    .emoji {
+      display: none;
+    }
+  }
+}

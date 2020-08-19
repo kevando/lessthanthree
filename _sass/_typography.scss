@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap");
+@import "mixins/fluid-type";
+@import "mixins/media-queries";
+
+@font-face {
+  font-family: "Didot";
+  src: url("../../assets/fonts/Didot Regular.ttf") format("truetype");
+}
+
+$serif: "Neuton";
+$sans-serif: Verdana;
+
+$thin: 200;
+$normal: 400;
+$bold: 700;
+
+// ---------------------------------------------------------
+// .title {
+
+// }
+// .sub-title {
+
+// }
+.content-header {
+
+}
+
+// ---------------------------------------------------------
+
+h1 {
+  font-family: $serif;
+  font-weight: $normal;
+  font-size: min(max(1rem, 8vw), 50px);
+  letter-spacing: 1px;
+}
+h2 {
+  font-family: $serif;
+  font-weight: $normal;
+  font-size: min(max(1rem, 9vw), 40px);
+}
+h3 {
+  @extend .content-header;
+  font-family: $serif;
+  font-weight: $bold;
+  font-size: min(max(1rem, 7vw), 38px);
+}
+h4 {
+  font-family: $sans-serif;
+  font-size: min(max(1rem, 6vw), 37px);
+}
+h5 {
+  font-family: $serif;
+  font-size: min(max(1rem, 9vw), 32px);
+  font-weight: 400;
+}
+p {
+  font-family: $serif;
+  font-size: min(max(1rem, 6vw), 32px);
+}
+li {
+  font-family: $serif;
+  font-size: min(max(1rem, 5vw), 32px);
+}
+td {
+  font-family: $sans-serif;
+  font-size: min(max(1rem, 4vw), 22px);
+}
+blockquote {
+  margin: 0;
+  p {
+    font-family: $sans-serif;
+    font-size: min(max(1rem, 4vw), 26px);
+  }
+}
+// * > code {
+//   font-size: 0.8em;
+//   background-color: rgb(255, 255, 233);
+//   padding: 0 5px;
+// }
+
+// ---------------------------------------------------------
+
+.content {
+  
+  $spacing-unit: 1.5rem;
+  $header-spacing: 0.5rem;
+
+  h2, h3 {
+    margin: 0;
+    line-height: 1;
+    + p {
+      margin-top: $header-spacing;
+    }
+  }
+  h5 {
+    margin: 0;
+    line-height: 1;
+    + ul {
+      margin-top: $header-spacing;
+    }
+  }
+
+  ul {
+    // margin-top: 0;
+    // margin-bottom: 0;
+  }
+  hr {
+    margin: $spacing-unit 0;
+    // + * {
+    //   // margin-top: 0rem;
+    // }
+  }
+}
+
+// ---------------------------------------------------------
+
+// -------- Layout Text ---------
+
+.site-links {
+  p {
+    font-size: min(max(1rem, 12vw), 35px);
+  }
+}
+
+// ------- Mobile ----------
+
+@include phone() {
+  blockquote {
+    margin-left: 0.5em;
+    p {
+      font-size: 20px;
+      line-height: 1.4;
+    }
+  }
+}
