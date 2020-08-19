@@ -1,0 +1,10 @@
+{
+  "repository": "github.com:kevando/lessthanthreee.git",
+  "license": "to love",
+  "scripts": {
+    "dev": "jekyll serve --livereload",
+    "git": "git add . && git commit -m",
+    "pregit": "git pull origin master",
+    "postgit": "git push origin master"
+  }
+}
