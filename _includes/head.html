@@ -1,0 +1,42 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  {%- feed_meta -%}
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+  {%- endif -%}
+
+
+  <!-- Title -->
+  <title>{{ site.title }}</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/fun.css" />
+
+  <!-- Favicons -->
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="{{ site.icon256 }}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.icon32 }}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.icon16 }}" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" /> -->
+
+  <!-- Twitter Card Tags -->
+  <!-- <meta name="twitter:card" content="{{ site.twitter_card_style }}" />
+  <meta name="twitter:site" content="{{ site.twitter_handle }}" />
+  <meta name="twitter:title" content="{{ twitter_title}}" />
+  <meta name="twitter:description" content="{{ twitter_description }}" />
+  <meta name="twitter:image" content="{{ twitter_image }}" /> -->
+
+  <!-- Facebook Preview Tags -->
+  <!-- <meta property="og:url" content="https://chaz.co" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{ facebook_title}}" />
+  <meta property="og:description" content="{{ facebook_description }}" />
+  <meta property="og:image" content="{{ facebook_image }}" /> -->
+
+  
+</head>
