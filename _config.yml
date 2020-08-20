@@ -32,3 +32,21 @@ theme: minima
 plugins:
   - jekyll-feed
 
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      meta:
+        title: Default Meta Title
+        description: Default Meta Description
+        og:
+          title: Default OG
+          image: od_default
+          # description: desccc
+        twitter:
+          title: Default twitter
+          image: tw_default
+          # description: tw desccc
+          card_style: summary

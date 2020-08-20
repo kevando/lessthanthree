@@ -1,27 +1,37 @@
 // Styles that apply to this website only
 
+.left,
+.right,
 body {
-  background-color: orange;
-}
-
-
-.content.items {
-
-  background-color: red;
-}
-
-.item {
-
-  &:nth-child(1) {
+  &.yellow {
+    background-color: $yellow;
+  }
+  &.purple {
     background-color: $purple;
   }
-  &:nth-child(2) {
+  &.red {
     background-color: $red;
   }
-  &:nth-child(3) {
+  &.blue {
     background-color: $blue;
   }
-  &:nth-child(4) {
+  &.pink {
     background-color: $pink;
   }
+  &.white {
+    background-color: white;
+    * {
+      color: black;
+    }
+  }
+  &.blue {
+    background-color: $blue;
+  }
+}
+
+::selection {
+  background: #ffb7b700; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ffb7b700; /* Gecko Browsers */
 }

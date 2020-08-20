@@ -1,0 +1,46 @@
+.heart {
+  z-index: 100;
+  position: absolute;
+  left: 50%;
+  margin-left: -10rem;
+  text-align: center;
+  // letter-spacing: -0.5rem;
+  width: 20rem;
+  font-size: 10rem;
+  font-weight: bold;
+  // color: $blue;
+  cursor: pointer;
+  transition: all 0.05s; /* Animation */
+  // text-shadow: rgba(214, 214, 214, 0.89) 1px 1px 2px;
+  &:hover {
+    // text-shadow: rgba(214, 214, 214, 1) 1px 1px 7px;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+
+.heart {
+  .yellow {
+    color: $yellow;
+  }
+  .purple {
+    color: $purple;
+  }
+  .red {
+    color: $red;
+  }
+  .blue {
+    color: $blue;
+  }
+  .pink {
+    color: $pink;
+  }
+  .white {
+    color: white;
+  }
+  .blue {
+    color: $blue;
+  }
+}
