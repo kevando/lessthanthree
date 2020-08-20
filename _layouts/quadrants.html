@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{%- include head.html -%}
+
+<body>
+
+  <script src="/assets/javascript/ui.js"></script>
+  <script src="/assets/javascript/main.js"></script>
+
+  <div class="quadrants">
+    {{ content }}
+  </div>
+</body>
+
+</html>

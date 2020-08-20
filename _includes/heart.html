@@ -1,0 +1,30 @@
+<div class="heart" id="Heart">
+  &#60;3
+
+
+</div>
+
+
+<script>
+
+var clicks = 0;
+function handleClick () {
+    clicks++;
+
+    if (clicks === 1) $heart.css('color', $yellow);
+    if (clicks === 2) {
+      $("#Title").text("what do you love?");
+    }
+
+
+  }
+</script>
+
+<script>
+  
+  var color = 'white';
+  var $heart = $("#Heart")
+
+  $heart.addClass(color)
+  $heart.on("click", handleClick)
+</script>
