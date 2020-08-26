@@ -1,5 +1,5 @@
 var db = firebase.firestore();
-var mediaType = window.location.pathname.split('/').pop()
+var mediaType = "book"; //window.location.pathname.split('/').pop()
 
 if(mediaType === "movie") mediaType = "🎬"
 if(mediaType === "book") mediaType = "📖"

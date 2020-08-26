@@ -1,33 +1,62 @@
-var userConfigRef = db.collection("users").doc("config");
 
-async function createUser() {
+var clicks = 0;
 
-  // Increment User
-  await userConfigRef.update({
-    total: firebase.firestore.FieldValue.increment(1)
-  });
+$("#Heart").on("click", function () {
+  clicks++;
 
-  // Set it as user id
-  var userId = await userConfigRef.get().then(function (doc) {
-    return doc.data().total
-  })
-
-  var user = {
-    userId: userId,
-    createdAt: Date.now()
+  if (clicks === 1) {
+    $("#Q1").text('the internet')
   }
 
-  var docId = await db.collection("users").add(user)
-    .then(function (docRef) {
-      return docRef.id
-    })
+  if (clicks === 2) {
+    $("#Q2").text('needs')
+  }
 
-  localStorage.setItem('lessthanthreee_doc_id', docId);
-  localStorage.setItem('lessthanthreee_user_id', docId);
+  if (clicks === 3) {
+    $("#Q4").text('more');
+  }
 
-  return docId;
-}
+  if (clicks === 4) {
+    $("#Q1").text('');
+    $("#Q2").text('');
+    $("#Q4").text('');
+  }
+
+  if (clicks === 5) {
+    $("#Q1").text('what')
+  }
+
+  if (clicks === 6) {
+    $("#Q2").text('do')
+  }
+
+  if (clicks === 7) {
+    $("#Q4").text('you');
+  }
+
+  if (clicks === 8) {
+
+    $("#Q1").text('📖');
+    $("#Q2").text('🎬');
+    $("#Q4").text('📻');
+
+    $("#Q1").click(function () {
+      window.location = "/form/book"
+    });
+
+    $("#Q2").click(function () {
+      window.location = "/form/movie"
+    });
+
+    $("#Q4").click(function () {
+      window.location = "/form/music"
+    });
+
+  }
+});
 
 
-
-
+//tmp
+$("#Q1").click(function () {
+  window.location = "/form"
+});
