@@ -44,6 +44,12 @@ $bold: 700;
   }
 }
 
+.text {
+  font-size: 10rem;
+  font-weight: bold;
+  color: white;
+}
+
 
 @include phone() {
   .text {

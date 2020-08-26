@@ -14,7 +14,7 @@
   <title>{{ site.title }}</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/css/fun.css" />
+  <link rel="stylesheet" href="/assets/css/fun.css" />
 
   <!-- Javascript -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -23,15 +23,13 @@
 
   <!-- Favicons -->
 
-  <!-- <link rel="icon" type="image/png" href="/assets/images/icon-earth.png" /> -->
+  <!-- Twitter -->
+  <meta name="twitter:card" content="{{  page.twitter_card_style }}" />
+  <meta name="twitter:title" content="{{  page.twitter_title }}" />
+  <meta name="twitter:description" content="{{  page.twitter_description }}" />
+  <meta name="twitter:image" content="{{ site.url }}{{  page.twitter_image }}" />
 
-  <!-- Twitter Card Tags -->
-  <meta name="twitter:card" content="{{  page.meta.twitter.card_style }}" />
-  <meta name="twitter:title" content="{{  page.meta.twitter.title }}" />
-  <meta name="twitter:description" content="{{  page.meta.twitter.description }}" />
-  <meta name="twitter:image" content="{{  page.meta.twitter.image }}" />
-
-  <!-- Facebook Preview Tags -->
+  <!-- Facebook -->
   <meta property="og:url" content="https://chaz.co" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{{ page.meta.og.title }}" />

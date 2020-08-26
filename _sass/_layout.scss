@@ -1,6 +1,5 @@
 @import "mixins/device";
 
-
 .quadrants {
   display: flex;
   align-content: center;
@@ -38,54 +37,58 @@
   }
 }
 
+.split {
+  display: flex;
+  align-content: center;
+  align-items: flex-start;
+  height: 100vh;
 
-
-
-
-.text {
-  // position: absolute;
-  // left: 50%;
-  // margin-left: -10rem;
-  // text-align: center;
-  // letter-spacing: -0.5rem;
-  // width: 20rem;
-  font-size: 10rem;
-  font-weight: bold;
-  color: white;
+  .half {
+    height: 100vh;
+    display: flex;
+    flex: 1;
+    max-width: 50%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
 
+.form-wrapper {
+  .text {
+    color: black;
+  }
+   .half {
+    padding: 2rem;
+  }
+}
 
-.title {
-  color: $yellow;
-  font-weight: bold;
-
-  // left: 5vw;
-
-  z-index: 200;
-  text-align: center;
+input[type=text] {
   font-size: 4rem;
-  width: 100vw;
-  position: absolute;
-  top: 20vh;
+  max-width: 100%;
+  padding:0.1em;
+}
+
+button[type=submit] {
+  background-color: $pink;
+  color: white;
+  font-size: 3rem;
+
 }
 
 @include phone() {
-
   .quadrants {
     height: 89vh;
     flex-direction: column;
-  
+
     .quadrant {
       position: relative;
       width: 100vw;
       height: 25vh;
       display: flex;
       flex: 1;
-  
+
       align-content: center;
       align-items: center;
-  
-
     }
   }
 }
