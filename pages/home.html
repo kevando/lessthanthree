@@ -1,0 +1,102 @@
+---
+layout: default
+permalink: /
+meta:
+og:
+title: Who broke the internet?
+image: /assets/images/who.jpg
+twitter:
+title: Who broke the internet?
+image: /assets/images/who.jpg
+card_style: summary
+---
+
+
+<div class="quadrants">
+
+  <div class="top left quadrant purple">
+    <span class="text small center">
+      <span id="Q1"></span>
+    </span>
+  </div>
+
+  <div class="top right quadrant blue">
+    <span class="text medium center">
+      <span id="Q2"></span>
+    </span>
+  </div>
+
+  <div class="bottom left quadrant yellow">
+    <span class="text huge center">
+      <span id="Q4"></span>
+    </span>
+  </div>
+
+  <div class="bottom right quadrant pink">
+    <div class="heart text" id="Heart">
+      &#60;3
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+  var clicks = 0;
+
+  $("#Heart").on("click", function () {
+    clicks++;
+
+    if (clicks === 1) {
+      $("#Q1").text('the internet')
+    }
+
+
+
+    if (clicks === 2) {
+      $("#Q2").text('needs')
+    }
+
+    if (clicks === 3) {
+      $("#Q4").text('more');
+    }
+
+    if (clicks === 4) {
+      $("#Q1").text('');
+      $("#Q2").text('');
+      $("#Q4").text('');
+    }
+
+    if (clicks === 5) {
+      $("#Q1").text('what')
+    }
+
+    if (clicks === 6) {
+      $("#Q2").text('do')
+    }
+
+    if (clicks === 7) {
+      $("#Q4").text('you');
+    }
+
+    if (clicks === 8) {
+
+      $("#Q1").text('📖');
+      $("#Q2").text('🎬');
+      $("#Q4").text('📻');
+
+      $("#Q1").click(function () {
+        window.location = "/form/book"
+      });
+
+      $("#Q2").click(function () {
+        window.location = "/form/movie"
+      });
+
+      $("#Q4").click(function () {
+        window.location = "/form/music"
+      });
+
+    }
+  })
+</script>
