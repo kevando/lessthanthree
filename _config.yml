@@ -10,6 +10,7 @@ theme: minima
 plugins:
   - jekyll-feed
 
+google_analytics: UA-16078011-5
 
 defaults:
   - scope:
