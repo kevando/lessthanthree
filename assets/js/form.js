@@ -3,8 +3,14 @@ console.log('mediaType11', mediaType)
 $("#MediaType").text(mediaType);
 $("#YourUrl").fadeOut();
 
+var placeholderText = ''
 
-// $("#YourUrl").fadeIn();
+if (mediaType === "📖") placeholderText = "Book?";
+if (mediaType === "🎬") placeholderText = "Movie?";
+if (mediaType === "🎮") placeholderText = "Video Game?";
+if (mediaType === "💽") placeholderText = "Album?";
+
+$("input[name=firstPlace]").attr("placeholder", placeholderText)
 
 $("#MyForm").on("submit", function (event) {
 
@@ -20,15 +26,11 @@ $("#MyForm").on("submit", function (event) {
     createdAt: new Date(),
   }
 
-
-
-  db
   favoritesCollection
     .add(data)
     .then(function (docRef) {
 
-      // $("input").prop("disabled", true);
-      
+
 
       var url = "/helping?" + docRef.id;
       var displayUrl = "lessthanthreee.com/helping?" + docRef.id;
@@ -38,8 +40,6 @@ $("#MyForm").on("submit", function (event) {
         $("#YourUrl").attr("href", url);
         $("#YourUrl").fadeIn();
       })
-
-
     })
     .catch(function (error) {
       console.error("Error adding document: ", error);

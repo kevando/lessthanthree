@@ -3,7 +3,7 @@ title: <3
 description: >- # this means to ignore newlines until "baseurl:"
   Tell the the world about what you love.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://lessthanthreee.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 theme: minima
@@ -21,10 +21,3 @@ defaults:
       twitter_description: ""
       twitter_image: /assets/images/broken.png
       twitter_card_type: summary
-
-      meta:
-        title: <3
-        description: Tell the the world about what you love.
-        og:
-          title: <3
-          image: od_default

@@ -8,15 +8,20 @@
 }
 
 input[type="text"] {
-  font-size: 4rem;
+  font-size: 3.2rem;
+  letter-spacing: -2px;
   max-width: 100%;
-  padding: 0.1em;
+  padding: 0.3rem 1rem;
   &:disabled {
     border: none;
     color: white;
     background: white;
   }
   max-width: 90vw;
+
+  &::placeholder {
+    color: #ccc;
+  }
 }
 
 button[type="submit"] {

@@ -53,8 +53,8 @@ $("#Heart").on("click", function () {
 
     $("#Q1").text('📖').addClass("clickable emoji");
     $("#Q2").text('🎬').addClass("clickable emoji");;
-    $("#Q3").text('📱').addClass("clickable emoji");;
-    $("#Q4").text('📻').addClass("clickable emoji");;
+    $("#Q3").text('🎮').addClass("clickable emoji");;
+    $("#Q4").text('💽').addClass("clickable emoji");;
     $("#Heart").hide();
 
     $(".quadrant").removeClass('yellow blue');
@@ -68,7 +68,7 @@ $("#Heart").on("click", function () {
 
     $("#Q1").click(function () {
       mediaType = '📖'
-      console.log('clicked')
+      $("input[name=firstPlace]").attr("placeholder", "Book?")
       $('.mediaTypeEmoji').text(mediaType)
       $("#HomeFormWrapper").show();
       $("html, body").animate({ scrollTop: $(document).height() }, "slow");
@@ -77,6 +77,7 @@ $("#Heart").on("click", function () {
 
     $("#Q2").click(function () {
       mediaType = '🎬'
+      $("input[name=firstPlace]").attr("placeholder", "Movie?")
       $('.mediaTypeEmoji').text(mediaType)
       $("#HomeFormWrapper").show();
       $("html, body").animate({ scrollTop: $(document).height() }, "slow");
@@ -84,14 +85,16 @@ $("#Heart").on("click", function () {
     });
 
     $("#Q3").click(function () {
-      mediaType = '📱'
+      mediaType = '🎮'
+      $("input[name=firstPlace]").attr("placeholder", "Video Game?")
       $('.mediaTypeEmoji').text(mediaType)
       $("#HomeFormWrapper").show();
       $("html, body").animate({ scrollTop: $(document).height() }, "slow");
       return false;
     });
     $("#Q4").click(function () {
-      mediaType = '📻'
+      mediaType = '💽'
+      $("input[name=firstPlace]").attr("placeholder", "Album?")
       $('.mediaTypeEmoji').text(mediaType)
       $("#HomeFormWrapper").show();
       $("html, body").animate({ scrollTop: $(document).height() }, "slow");
