@@ -29,9 +29,33 @@ body {
   }
 }
 
+a, .text {
+  &.yellow {
+    color: $yellow;
+  }
+  &.purple {
+    color: $purple;
+  }
+  &.red {
+    color: $red;
+  }
+  &.blue {
+    color: $blue;
+  }
+  &.pink {
+    color: $pink;
+  }
+  &.white {
+    color: white;
+  }
+  &.blue {
+    color: $blue;
+  }
+}
+
 ::selection {
-  background: #000000; /* WebKit/Blink Browsers */
-  color: white
+  background: #00000000; /* WebKit/Blink Browsers */
+  color: white;
 }
 ::-moz-selection {
   background: #ffb7b700; /* Gecko Browsers */

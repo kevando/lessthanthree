@@ -29,8 +29,11 @@ $bold: 700;
   font-weight: bold;
   color: white;
 
-  &.large {
+  &.huge {
     font-size: 10rem;
+  }
+  &.large {
+    font-size: 8rem;
   }
   &.medium {
     font-size: 5rem;

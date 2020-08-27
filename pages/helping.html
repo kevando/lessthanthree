@@ -1,0 +1,51 @@
+---
+permalink: /helping
+---
+
+<script>
+    var mediaType;
+</script>
+
+<script src="/assets/js/helping.js"></script>
+
+
+
+
+<div class="quadrants">
+
+    <div class="top left quadrant purple">
+        <span class="text small center" id="SecondPlace">?</span>
+    </div>
+
+    <div class="top right quadrant blue">
+        <span class="text huge center" id="FirstPlace">?</span>
+    </div>
+
+    <div class="bottom left quadrant yellow">
+        <span class="text large center clickable " id="MediaTypeBtn">?</span>
+    </div>
+
+    <div class="bottom right quadrant pink">
+        <div class="heart text" id="Heart">
+            &#60;3
+        </div>
+    </div>
+</div>
+
+<div id="HelpingFormWrapper">
+    {% include form.html %}
+</div>
+
+<script>
+    $("#HelpingFormWrapper").hide();
+
+    $("#MediaTypeBtn").click(function () {
+        console.log('mediaType', mediaType)
+        $("#HelpingFormWrapper").show();
+
+        // $("a[href='#bottom']").click(function() {
+        $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+        return false;
+        // });
+    })
+</script>

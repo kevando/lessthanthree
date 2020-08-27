@@ -1,6 +1,9 @@
 
 var clicks = 0;
 
+$("#Heart").removeClass('white');
+$("#Heart").addClass('yellow');
+
 $("#Heart").on("click", function () {
   clicks++;
 
@@ -14,12 +17,24 @@ $("#Heart").on("click", function () {
 
   if (clicks === 3) {
     $("#Q4").text('more');
+    // $("#Heart").removeClass('white');
+    // $("#Heart").addClass('yellow');
   }
 
   if (clicks === 4) {
+    
+    $(".quadrant").removeClass('blue');
+    $(".quadrant").addClass('yellow');
+
+    $("#Heart").removeClass('yellow');
+    $("#Heart").addClass('purple');
+
     $("#Q1").text('');
     $("#Q2").text('');
     $("#Q4").text('');
+
+    $(".text").removeClass('small medium');
+    $(".text").addClass('large');
   }
 
   if (clicks === 5) {
@@ -36,27 +51,53 @@ $("#Heart").on("click", function () {
 
   if (clicks === 8) {
 
-    $("#Q1").text('📖');
-    $("#Q2").text('🎬');
-    $("#Q4").text('📻');
+    $("#Q1").text('📖').addClass("clickable emoji");
+    $("#Q2").text('🎬').addClass("clickable emoji");;
+    $("#Q3").text('📱').addClass("clickable emoji");;
+    $("#Q4").text('📻').addClass("clickable emoji");;
+    $("#Heart").hide();
+
+    $(".quadrant").removeClass('yellow blue');
+    $(".text").removeClass('small medium large');
+    $(".text").addClass('medium');
+
+    $(".q1").addClass('purple');
+    $(".q2").addClass('yellow');
+    $(".q3").addClass('pink');
+    $(".q4").addClass('blue');
 
     $("#Q1").click(function () {
-      window.location = "/form/book"
+      mediaType = '📖'
+      console.log('clicked')
+      $('.mediaTypeEmoji').text(mediaType)
+      $("#HomeFormWrapper").show();
+      $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+      return false;
     });
 
     $("#Q2").click(function () {
-      window.location = "/form/movie"
+      mediaType = '🎬'
+      $('.mediaTypeEmoji').text(mediaType)
+      $("#HomeFormWrapper").show();
+      $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+      return false;
     });
 
+    $("#Q3").click(function () {
+      mediaType = '📱'
+      $('.mediaTypeEmoji').text(mediaType)
+      $("#HomeFormWrapper").show();
+      $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+      return false;
+    });
     $("#Q4").click(function () {
-      window.location = "/form/music"
+      mediaType = '📻'
+      $('.mediaTypeEmoji').text(mediaType)
+      $("#HomeFormWrapper").show();
+      $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+      return false;
     });
 
   }
 });
 
-
-//tmp
-$("#Q1").click(function () {
-  window.location = "/form"
-});

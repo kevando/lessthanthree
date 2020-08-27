@@ -1,0 +1,29 @@
+
+.form-wrapper {
+  .text {
+    color: black;
+  }
+  .half {
+    padding: 2rem;
+  }
+}
+
+input[type="text"] {
+  font-size: 4rem;
+  max-width: 100%;
+  padding: 0.1em;
+  &:disabled {
+    border: none;
+    color: white;
+    background: white;
+  }
+}
+
+button[type="submit"] {
+  background-color: $pink;
+  padding: 6px 0;
+  color: white;
+  font-size: 3rem;
+  border:none;
+  font-weight: bold;
+}

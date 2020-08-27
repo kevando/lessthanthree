@@ -12,3 +12,6 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+var db = firebase.firestore();
+
+const favoritesCollection = db.collection("favorites-v1");

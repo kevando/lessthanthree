@@ -9,6 +9,7 @@
   .quadrant {
     position: absolute;
     width: 50vw;
+    max-width: 50%;
     height: 50vh;
     display: flex;
     flex: 1;
@@ -53,27 +54,6 @@
   }
 }
 
-.form-wrapper {
-  .text {
-    color: black;
-  }
-   .half {
-    padding: 2rem;
-  }
-}
-
-input[type=text] {
-  font-size: 4rem;
-  max-width: 100%;
-  padding:0.1em;
-}
-
-button[type=submit] {
-  background-color: $pink;
-  color: white;
-  font-size: 3rem;
-
-}
 
 @include phone() {
   .quadrants {
@@ -92,3 +72,4 @@ button[type=submit] {
     }
   }
 }
+

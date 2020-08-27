@@ -1,0 +1,97 @@
+/***** Wiggle *****/
+
+.wiggle a:hover {
+  animation: wiggle 75ms infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: translate(2px, 0);
+  }
+  50% {
+    transform: translate(-2px, 0);
+  }
+  100% {
+    transform: translate(2px, 0);
+  }
+}
+
+/***** Shake *****/
+
+.shake a:hover {
+  animation: shake 75ms infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0.5deg);
+  }
+  50% {
+    transform: rotate(-0.5deg);
+  }
+  100% {
+    transform: rotate(0.5deg);
+  }
+}
+
+/***** Pulse *****/
+
+.pulse a:hover {
+  animation: pulse 1s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/***** Zoom *****/
+
+.zoom a:hover {
+  transform: scale(1.1);
+  transition: all ease 500ms;
+}
+
+/***** Some Misc Styles *****/
+
+
+
+.clickable {
+  cursor: pointer;
+  transition: all ease 500ms;
+  &:hover {
+    text-shadow: #ffffff8a 0px 4px 21px;
+    transform: scale(1.05);
+    transition: all ease 500ms;
+  }
+}
+
+.emoji {
+  animation: pulse 300ms 1;
+  animation-timing-function: ease-out;
+}
+
+
+@keyframes popUp {
+  0% {
+    transform: translate(0, 20px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
+.pop-up {
+  animation: popUp 300ms 1;
+  animation-timing-function: ease-out;
+}

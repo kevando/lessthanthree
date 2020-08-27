@@ -11,35 +11,45 @@ image: /assets/images/who.jpg
 card_style: summary
 ---
 
+<script>
+  var mediaType;
+</script>
 
 <div class="quadrants">
 
-  <div class="top left quadrant purple">
-    <span class="text small center">
-      <span id="Q1"></span>
-    </span>
+  <div class="top left quadrant q1 blue">
+    <span class="text medium center" id="Q1"></span>
   </div>
 
-  <div class="top right quadrant blue">
-    <span class="text medium center">
-      <span id="Q2"></span>
-    </span>
+  <div class="top right quadrant q2 blue">
+    <span class="text medium center" id="Q2"></span>
   </div>
 
-  <div class="bottom left quadrant yellow">
-    <span class="text huge center">
-      <span id="Q4"></span>
-    </span>
+  <div class="bottom left quadrant q3 blue">
+    <span class="text large center" id="Q4"></span>
   </div>
 
-  <div class="bottom right quadrant pink">
-    <div class="heart text" id="Heart">
+  <div class="bottom right quadrant q4 blue">
+    <span class="text small center" id="Q3"></span>
+    <div class="heart text white" id="Heart">
       &#60;3
     </div>
   </div>
 </div>
 
+<div id="HomeFormWrapper">
+  {% include form.html %}
+</div>
+
 
 <script src="/assets/js/home.js">
+
+</script>
+
+
+
+
+<script>
+  $("#HomeFormWrapper").hide();
 
 </script>
