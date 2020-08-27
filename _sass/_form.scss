@@ -42,6 +42,9 @@ button[type="submit"] {
 
 .form-wrapper {
   height: 100vh;
+  @include phone() {
+    height: 90vh;
+  }
 }
 
 /* Common Styles */
@@ -72,4 +75,9 @@ button[type="submit"] {
   @include phone() {
     height: 18vh;
   }
+
+  // hack fix
+
 }
+
+

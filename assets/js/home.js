@@ -86,6 +86,7 @@ $("#Heart").on("click", function () {
 
     $("#Q3").click(function () {
       mediaType = '🎮'
+      // alert('clicked vg')
       $("input[name=firstPlace]").attr("placeholder", "Video Game?")
       $('.mediaTypeEmoji').text(mediaType)
       $("#HomeFormWrapper").show();
@@ -94,6 +95,7 @@ $("#Heart").on("click", function () {
     });
     $("#Q4").click(function () {
       mediaType = '💽'
+      // alert('clicked album')
       $("input[name=firstPlace]").attr("placeholder", "Album?")
       $('.mediaTypeEmoji').text(mediaType)
       $("#HomeFormWrapper").show();
