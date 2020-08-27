@@ -14,10 +14,13 @@
   // text-shadow: rgba(214, 214, 214, 0.89) 1px 1px 2px;
   &:hover {
     // text-shadow: rgba(214, 214, 214, 1) 1px 1px 7px;
+    transform: scale(1.05);
   }
   &:active {
+    // background: red;
     transform: scale(0.95);
   }
+
 }
 
 

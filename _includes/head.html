@@ -11,7 +11,7 @@
 
 
   <!-- Title -->
-  <title>{{ site.title }}</title>
+  <title>{{ page.title | default: site.title }}</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/fun.css" />
@@ -22,10 +22,10 @@
 
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="64x64" href="/assets/images/icon-earth.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icon-16-goat.png" />
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="{{  page.twitter_card_style }}" />
+  <meta name="twitter:card" content="{{  page.twitter_card_type }}" />
   <meta name="twitter:title" content="{{  page.twitter_title }}" />
   <meta name="twitter:description" content="{{  page.twitter_description }}" />
   <meta name="twitter:image" content="{{ site.url }}{{  page.twitter_image }}" />

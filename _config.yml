@@ -20,7 +20,7 @@ defaults:
       twitter_title: "Twitter titlke"
       twitter_description: ""
       twitter_image: /assets/images/broken.png
-      twitter_card_style: summary
+      twitter_card_type: summary
 
       meta:
         title: <3

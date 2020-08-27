@@ -8,8 +8,8 @@ $("#YourUrl").fadeOut();
 
 $("#MyForm").on("submit", function (event) {
 
-  console.log("form submitted");
-  $("#SubmitFormBtn").text("telling the internet")
+  $("#SubmitFormBtn").text("telling the internet");
+  $("input").fadeOut("fast");
 
   event.preventDefault();
 
@@ -20,18 +20,20 @@ $("#MyForm").on("submit", function (event) {
     createdAt: new Date(),
   }
 
-  console.log(data);
+
 
   db
   favoritesCollection
     .add(data)
     .then(function (docRef) {
 
-      $("input").prop("disabled", true);
+      // $("input").prop("disabled", true);
+      
+
       var url = "/helping?" + docRef.id;
       var displayUrl = "lessthanthreee.com/helping?" + docRef.id;
 
-      $("#SubmitFormBtn").fadeOut("fast", function () {
+      $("#SubmitFormBtn").fadeOut("slow", function () {
         $("#YourUrl").text(displayUrl)
         $("#YourUrl").attr("href", url);
         $("#YourUrl").fadeIn();

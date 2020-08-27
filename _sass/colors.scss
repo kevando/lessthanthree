@@ -1,4 +1,10 @@
-// Styles that apply to this website only
+body {
+  background-color: $blue;
+}
+
+.form-wrapper {
+  background-color: white;
+}
 
 .left,
 .right,
